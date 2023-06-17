@@ -40,4 +40,19 @@ class ServiceUser:
         return "Usuario não encontrado"
 
     ###    update(apenas atualizar o job)
-    ### recuperar o nome da pessoa dado o trabalho dela
+    def update_user(self, name, new_job):
+        user_bd = self.check_user(name)
+        if user_bd is not None:
+            user_bd.job = new_job
+            return "Job atualizado com sucesso"
+        else:
+            return "Usuario não encontrado"
+
+    ### recuperar o trabalho da pessoa dado o nome dela
+    def select_user(self, name):
+        user_bd = self.check_user(name)
+        if user_bd is not None:
+            return "Job: " + user_bd.job
+        else:
+            return "Usuario não encontrado"
+
