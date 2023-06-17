@@ -13,9 +13,9 @@ user = User(name=name, job=job)
 # print(user.job)
 
 service = ServiceUser()
-resultado = service.add_user(name=name, job=job)
+adicionar = service.add_user(name=name, job=job)
 print(service.store.bd)
-print(resultado)
+print(adicionar)
 
 nome = 'Matheus'
 
