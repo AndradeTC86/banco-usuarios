@@ -46,7 +46,7 @@ class TestServiceUser:
     def test_validate_invalid_user(self):
         name_inv = 100
         job_inv = 'Tester'
-        resultado_esperado = 'Nome ou Profissao precisa ser um texto'
+        resultado_esperado = 'Nome ou Profissão precisa ser um texto'
         service = ServiceUser()
 
         resultado = service.add_user(name=name_inv, job=job_inv)
@@ -56,7 +56,7 @@ class TestServiceUser:
     def test_validate_invalid_job(self):
         name_inv = 'Matheus'
         job_inv = 100
-        resultado_esperado = 'Nome ou Profissao precisa ser um texto'
+        resultado_esperado = 'Nome ou Profissão precisa ser um texto'
         service = ServiceUser()
 
         resultado = service.add_user(name=name_inv, job=job_inv)
@@ -93,7 +93,7 @@ class TestServiceUser:
     def test_update_job_with_success(self):
         name = 'Thiago'
         job = 'TechLead'
-        resultado_esperado = 'Job atualizado com sucesso'
+        resultado_esperado = 'Profissão atualizada com sucesso'
         service = ServiceUser()
 
         resultado = service.update_user(name=name, new_job=job)
@@ -122,7 +122,7 @@ class TestServiceUser:
 
     def test_select_user_success(self):
         name = 'Thiago'
-        resultado_esperado = 'Job: Tester'
+        resultado_esperado = 'Profissão: Tester'
         service = ServiceUser()
 
         resultado = service.select_user(name=name)
